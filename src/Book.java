@@ -9,13 +9,13 @@ public class Book {
     private int year;
     private boolean available;
 
-    // Default constructor
+
     public Book() {
         this.id = idGen++;
         this.available = true;
     }
 
-    // Constructor with parameters
+
     public Book(String title, String author, int year) {
         this();
         setTitle(title);
@@ -23,7 +23,7 @@ public class Book {
         setYear(year);
     }
 
-    // Getters
+
     public int getId() {
         return id;
     }
@@ -44,7 +44,7 @@ public class Book {
         return available;
     }
 
-    // Setters with validation
+
     public void setTitle(String title) {
         if (title == null || title.trim().isEmpty()) {
             throw new IllegalArgumentException("Title must not be null or empty");
@@ -67,7 +67,7 @@ public class Book {
         this.year = year;
     }
 
-    // Business methods
+
     public void markAsBorrowed() {
         this.available = false;
     }
